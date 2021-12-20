@@ -1,0 +1,8 @@
+#
+# /etc/ports/kira-n7000.httpup: Unofficial CRUX-ARM ports overlay for Airis Kira N7000
+#
+
+ROOT_DIR=/usr/ports/kira-n7000
+URL=https://raw.githubusercontent.com/sepen/crux-ports-arm-kira-n7000/main/
+
+# End of file
