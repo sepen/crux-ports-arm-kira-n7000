@@ -1,0 +1,20 @@
+# Description: Tools to configure and manipulate wlan devices
+# URL: http://www.labs.hpe.com/personal/Jean_Tourrilhes/Linux/Tools.html
+# Packager: Till Biedermann, tillbiedermann at yahoo dot de
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Depends on:
+
+name=wireless-tools
+version=29
+release=2
+source=(https://hewlettpackard.github.io/wireless-tools/wireless_tools.$version.tar.gz)
+
+build() {
+	cd ${name/-/_}.$version
+
+	# fix compiler flags
+	sed "s|CFLAGS=|CFLAGS=$CFLAGS |" -i Makefile
+
+	make
+	make PREFIX=$PKG/usr INSTALL_MAN=$PKG/usr/share/man install
+}
