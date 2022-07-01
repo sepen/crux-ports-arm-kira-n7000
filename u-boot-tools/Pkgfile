@@ -1,0 +1,21 @@
+# Description: U-Boot tools
+# URL: https://www.denx.de/wiki/U-Boot/WebHome
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: openssl gnutls
+
+name=u-boot-tools
+version=2014.01
+release=1
+source=(https://ftp.denx.de/pub/u-boot/u-boot-$version.tar.bz2)
+
+build() {
+  cd u-boot-$version
+
+  make tools
+
+  install -d -m 0755 $PKG/usr/{bin,share/man/man1}
+  install -m 0755 tools/mkimage $PKG/usr/bin/mkimage
+  install -m 0755 tools/mkenvimage $PKG/usr/bin/mkenvimage
+  install -m 0755 tools/dumpimage $PKG/usr/bin/dumpimage
+  install -D -m 0644 doc/mkimage.1 $PKG/usr/share/man/man1/mkimage.1
+}
