@@ -1,0 +1,23 @@
+# Description: Run commands in an environment faking root privileges
+# URL:         http://packages.debian.org/unstable/utils/fakeroot
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+
+name=fakeroot
+version=1.21
+release=2
+source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.orig.tar.gz
+        silence-dlerror.patch)
+
+build () {
+    cd $name-$version
+
+    # https://sourceware.org/bugzilla/show_bug.cgi?id=19509
+    patch -p1 -i $SRC/silence-dlerror.patch
+
+    sed -i '/^SUBDIRS/d' doc/Makefile.am
+    ./bootstrap
+    # build with TCP instead of IPC (required for precompiled kernel in kira-n7000)
+    ./configure --prefix=/usr --with-ipc=tcp
+    make
+    make DESTDIR=$PKG install
+}
