@@ -6,6 +6,7 @@ d:u-boot-tools
 d:wpa_supplicant
 d:ca-certificates
 d:expat
+d:man-pages
 d:fakeroot
 d:iptables
 f:bf3e5503156333f750f6b0ff789a573d:wireless-tools/.footprint
@@ -36,6 +37,9 @@ f:9ce19ac43670705ec2e22dfd71dd0ea4:ca-certificates/.md5sum
 f:defc37aaa35677c7cb712559e2783a75:expat/.footprint
 f:b9e4a051c4dfd4b1e1789108ff92d78d:expat/Pkgfile
 f:fae16edd97dfc7cd7a47aea8d6527a95:expat/.md5sum
+f:bc2ad577b288fa4b1af7a3f831a12f55:man-pages/.footprint
+f:52929b5b660b57c3b11724444b194ae8:man-pages/Pkgfile
+f:ecd360cc20a2c10898c2270f20458e07:man-pages/.md5sum
 f:46e48b7a08d665a4cb310d40d8933939:fakeroot/.footprint
 f:5fba0b541b5af39d804265223fda525c:fakeroot/silence-dlerror.patch
 f:e53a657efe0f396915bdcb3cf34007f8:fakeroot/Pkgfile
