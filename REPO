@@ -1,6 +1,7 @@
 d:wireless-tools
 d:portdbc
 d:kbd
+d:eudev
 d:ed
 d:u-boot-tools
 d:wpa_supplicant
@@ -19,6 +20,11 @@ f:c139b01a65075a67737c22c042963ca6:portdbc/.md5sum
 f:e6d37048fd3de20cdd1d623eb0faa602:kbd/.footprint
 f:357e682e6d275bfde0bd417b93ba9382:kbd/Pkgfile
 f:addd6a780ee3f83ef0a3d4a95eea196f:kbd/.md5sum
+f:cca99132d9de99ac4ef16198560de837:eudev/.footprint
+f:fa54a85b207c57152972226359fb819a:eudev/Pkgfile
+f:ee21e150df6c804eef03a6cb2fc1cceb:eudev/81-crux.rules
+f:e3dee8c4411efca7b62a9adf8b73c692:eudev/start_udev
+f:7d687087761fa3732ba7bf2d9a147e8a:eudev/.md5sum
 f:3e155d4a7adb32da44665179758ec66b:ed/.footprint
 f:3f7a8730531cbc5d54fc97bc36d7f934:ed/Pkgfile
 f:ae7ebb89a47ae19521480700f0cb8819:ed/.md5sum
