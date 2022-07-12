@@ -101,8 +101,8 @@ f:6b593be6ef3f6da8e247f3b2dfcfbdbb:iptables/Pkgfile
 f:b632a00da230aa1e79fe6098262be634:iptables/.md5sum
 f:4d5e1509e418d2990b3df79872fa9e73:udev/.footprint
 f:71cff1a782fe2c45def36d518966d261:udev/Pkgfile
-f:9b8907c472546192fa0d1e20fc45d7b0:udev/start_udev
-f:b5695cb6f9d9dab73b6bb56330c51b4d:udev/.md5sum
+f:803b4938866ed075ffa8a802a9f466db:udev/start_udev
+f:4749cdaaa87658b39c07e2bc65d8fd3d:udev/.md5sum
 f:d5d87366f79449c2e8e3073e4a9bd488:udev/README
 f:ec215426cec02c13e8e561871d91b98b:udev/40-scratch.rules
 f:9f14b99fd7ffaa76414322cc4c87126d:udev/99-input.rules
