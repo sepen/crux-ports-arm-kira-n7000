@@ -28,8 +28,8 @@ echo > /proc/sys/kernel/hotplug
 kill -9 $(/bin/pidof -s udevd) >/dev/null 2>&1
 /sbin/udevd --daemon
 
-# wait 5 seconds before triggering uevents and wait udevd to be initialized
-/sbin/udevadm control --ping
+# wait 2 seconds before triggering uevents and wait udevd to be initialized
+sleep 2
 
 # coldplug devices and wait for the queue to be processed
 /sbin/udevadm trigger --action=add --type=subsystems
