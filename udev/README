@@ -1,0 +1,13 @@
+README for udev
+
+
+NOTES
+
+  Related links describing the problem around:
+
+  udevd[XXX]: unable to receive ctrl connection: Function not implemented
+
+  https://crux-arm.nu/pipermail/crux-arm/2012-January/000113.html
+  https://lists.debian.org/debian-ia64/2011/11/msg00009.html
+  https://www.openembedded.org/pipermail/openembedded-devel/2011-June/078419.html
+
