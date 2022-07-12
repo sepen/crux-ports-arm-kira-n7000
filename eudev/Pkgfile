@@ -1,47 +1,19 @@
-# Description: Userspace device management daemon
-# URL:         http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  kmod
+# Description: Fake eudev package for Airis Kira N7000
+# URL:         https://github.com/sepen/crux-on-devices/tree/master/airis-kira-n7000
+# Maintainer:  Jose Beneyto, sepen at crux dot nu
+# Depends on:  udev
 
 name=eudev
-version=3.2.1
+version=1
 release=1
-source=(http://dev.gentoo.org/~blueness/$name/$name-$version.tar.gz
-        81-crux.rules start_udev)
+source=()
 
 build() {
-    cd $name-$version
-    
-    # needed for static linking, e.g. dmsetup.static 
-    sed -i '/^Libs:/s/-ludev/-ludev -lrt/' src/libudev/libudev.pc.in
+    # Airis Kira N7000 comes with a precompiled kernel and DEVTMPFS is not
+    # compiled on it, so we use udev-175 which still uses filesystem tmpfs
+    # to mount /dev instead of forcing to devtmpfs
 
-    # fix for gperf 3.1
-    # https://github.com/gentoo/eudev/commit/5bab4d8de0dcbb8e2e7d4d5125b4aea1652a0d60
-    sed -i '/*keyboard_lookup_key/d' src/udev/udev-builtin-keyboard.c
-
-    ./configure --prefix=/usr \
-                --sbindir=/sbin --bindir=/sbin \
-                --sysconfdir=/etc \
-                --with-rootprefix= \
-                --with-rootlibdir=/lib \
-                --libexecdir=/lib \
-                --disable-introspection \
-                --disable-manpages \
-                --enable-split-usr 
-
-    make CFLAGS="$CFLAGS -D_GNU_SOURCE" 
-    make install DESTDIR=$PKG
-    make -C man install DESTDIR=$PKG
-
-    # create binary hwdb
-    LD_LIBRARY_PATH=$PKG/lib \
-    $PKG/sbin/udevadm hwdb --update --root=$PKG
-
-    # Devices
-    install -d $PKG/lib/{firmware,udev/devices/{pts,shm}}
-    install -d $PKG/{lib,sbin,run}
-
-    # Add CRUX items
-    install -m 0755 $SRC/start_udev $PKG/sbin
-    install -m 0644 $SRC/81-crux.rules $PKG/lib/udev/rules.d
+    install -d -m 0755 $PKG/usr/lib
+    ln -sf libudev.so $PKG/usr/lib/libudev.so.0 
+    ln -sf libudev.so $PKG/usr/lib/libudev.so.1 
 }
