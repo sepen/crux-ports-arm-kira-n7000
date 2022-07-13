@@ -2,9 +2,11 @@ d:wireless-tools
 d:portdbc
 d:mlocate
 d:kbd
+d:python3
 d:eudev
 d:ed
 d:u-boot-tools
+d:xorg-xcb-util-xrm
 d:glibc
 d:usbutils
 d:pciutils
@@ -35,6 +37,9 @@ f:ba81e63d0d15d630e5feaecb066b202c:mlocate/updatedb.conf
 f:e6d37048fd3de20cdd1d623eb0faa602:kbd/.footprint
 f:357e682e6d275bfde0bd417b93ba9382:kbd/Pkgfile
 f:addd6a780ee3f83ef0a3d4a95eea196f:kbd/.md5sum
+f:bdbbfdc0cdaee32af303a89f7b342907:python3/.footprint
+f:68216f00d16fa629c997c381d85448a0:python3/Pkgfile
+f:7fb3a030b3580472794abfadfdcb2c63:python3/.md5sum
 f:c2c2d39651afa6111593cdd54c367db4:eudev/.footprint
 f:97adc1f5d41237d3104cd40fe7d27cce:eudev/Pkgfile
 f:e3dee8c4411efca7b62a9adf8b73c692:eudev/start_udev
@@ -45,6 +50,9 @@ f:ae7ebb89a47ae19521480700f0cb8819:ed/.md5sum
 f:fb9c2877433d94a4af88de9e34aa7cd3:u-boot-tools/.footprint
 f:2ed3f068494bc48d7503891a5da15d7f:u-boot-tools/Pkgfile
 f:6bd0144012e7b2318857528ee178db2c:u-boot-tools/.md5sum
+f:80e849824bbe614b2a87b956bf7fa46a:xorg-xcb-util-xrm/.footprint
+f:fba1f3f01dbded60441de1a65b7d8e04:xorg-xcb-util-xrm/Pkgfile
+f:df300b56f70767921b1bc6c6e44745f1:xorg-xcb-util-xrm/.md5sum
 f:c0e4a708857a0a50b9a3d1a5cc315763:glibc/CVE-2015-8777.patch
 f:acf9daad1ee85de5efd3543965596a63:glibc/resolv.conf
 f:75931315bf9bc9be15a5e25e4ddd5f0d:glibc/nsswitch.conf
