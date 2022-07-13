@@ -1,5 +1,6 @@
 d:wireless-tools
 d:portdbc
+d:mlocate
 d:kbd
 d:eudev
 d:ed
@@ -26,6 +27,11 @@ f:6d369134e2aa07120bf99a215015c8e7:portdbc/fixups.patch
 f:3cb38a77be4e7ae112ca07ff9beff52d:portdbc/.footprint
 f:d07fcee92689506d21d516d5e0c16b1d:portdbc/Pkgfile
 f:c139b01a65075a67737c22c042963ca6:portdbc/.md5sum
+f:00947fd6d4e8c1316d4a7ff33b08b64e:mlocate/.footprint
+f:7d67badc004a8ade29648c8449b479e4:mlocate/mlocate
+f:ad6e69ae0a71b5bae43cd255e9167ff0:mlocate/Pkgfile
+f:abce08aa7b0ec249333f60328d325724:mlocate/.md5sum
+f:ba81e63d0d15d630e5feaecb066b202c:mlocate/updatedb.conf
 f:e6d37048fd3de20cdd1d623eb0faa602:kbd/.footprint
 f:357e682e6d275bfde0bd417b93ba9382:kbd/Pkgfile
 f:addd6a780ee3f83ef0a3d4a95eea196f:kbd/.md5sum
