@@ -1,0 +1,19 @@
+# Description: Caching mechanism for freedesktop.org compliant menus
+# URL:         https://lxde.org/
+# Maintainer:  Jose Beneyto, sepen at crux dot nu
+# Depends on:  libfm
+
+name=menu-cache
+version=1.1.0
+release=1
+source=(https://downloads.sourceforge.net/lxde/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr \
+              --libexecdir=/usr/lib/$name
+
+	make
+	make DESTDIR=$PKG install
+}
