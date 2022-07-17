@@ -1,0 +1,22 @@
+# Description: A library for a new image format comparable to JPEG.
+# URL: https://developers.google.com/speed/webp/
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: giflib libpng libtiff
+
+name=libwebp
+version=1.1.0
+release=1
+source=(https://storage.googleapis.com/downloads.webmproject.org/releases/webp/$name-$version.tar.gz)
+
+build() {
+  cd $name-$version
+
+  ./configure --prefix=/usr \
+              --disable-neon \
+              --enable-libwebpmux \
+              --enable-libwebpdemux \
+              --enable-libwebpdecoder
+
+  MAKEFLAGS="$MAKEFLAGS" make
+  make DESTDIR=$PKG install
+}
