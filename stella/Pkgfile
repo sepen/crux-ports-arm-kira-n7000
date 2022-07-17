@@ -1,0 +1,20 @@
+# Description: Atari 2600 VCS emulator
+# URL: https://stella-emu.github.io/
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: libsdl2 desktop-file-utils
+
+name=stella
+version=5.1.3
+release=1
+source=(https://github.com/stella-emu/stella/archive/refs/tags/$version.tar.gz)
+
+build() {
+  cd $name-$version
+
+  ./configure --prefix=/usr
+
+  make
+  make DESTDIR=$PKG install
+
+  rm -rf $PKG/usr/share/doc
+}
