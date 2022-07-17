@@ -1,3 +1,4 @@
+d:stella
 d:wireless-tools
 d:portdbc
 d:mlocate
@@ -28,6 +29,10 @@ d:libpcre
 d:iptables
 d:udev
 d:menu-cache
+f:33f021ae8773decb27d0461028bb88ce:stella/.footprint
+f:75d666cbab1ee6bf8acf8c1e8ecdd724:stella/Pkgfile
+f:53455b0f67ba13930d2af15e9655c6df:stella/.md5sum
+f:b9c0e9bbd62a1bd707d2d53a6fcdd546:stella/post-install
 f:bf3e5503156333f750f6b0ff789a573d:wireless-tools/.footprint
 f:46d65424e060346ab4077fdf5431d511:wireless-tools/Pkgfile
 f:74668df14f05a96044fa47283ac62f92:wireless-tools/.md5sum
